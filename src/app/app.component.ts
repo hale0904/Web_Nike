@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CartComponent } from '~/pages/cart/cart.component';
+import { HomeComponent } from '~/pages/home/home.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    HomeComponent,
+    CartComponent,
+    RouterOutlet, 
+    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
