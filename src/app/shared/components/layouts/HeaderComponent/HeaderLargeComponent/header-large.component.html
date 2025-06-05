@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="header-large">
+  <div class="header-large__logo">
+    <svg aria-hidden="true" class="header-larger__img" focusable="false" viewBox="0 0 24 24" role="img" fill="none">
+        <path
+            fill="currentColor"
+            fill-rule="evenodd"
+            d="M21 8.719L7.836 14.303C6.74 14.768 5.818 15 5.075 15c-.836 0-1.445-.295-1.819-.884-.485-.76-.273-1.982.559-3.272.494-.754 1.122-1.446 1.734-2.108-.144.234-1.415 2.349-.025 3.345.275.2.666.298 1.147.298.386 0 .829-.063 1.316-.19L21 8.719z"
+            clip-rule="evenodd"
+        ></path>
+    </svg>
+  </div>
+
+  <ul class="header-large__nav-list">
+    <li *ngFor="let item of menuItems; let last = last" class="header-large__nav-item">
+      <a [routerLink]="item.link" class="header-large__nav-link">
+        {{ item.label }}
+      </a>
+    </li>
+  </ul>
+
+  <div class="header-large__icon-nav">
+    <!-- SEARCH BOX -->
+    <div class="header-large__search">
+      <div class="header-large__icon-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <input
+        type="text"
+        placeholder="Search"
+        class="header-large__input"
+        [(ngModel)]="searchQuery"
+      />
+    </div>
+
+    <!-- ICON LIST -->
+    <ul class="header-large__icon-list">
+      <li class="header-large__icon-item">
+        <a [routerLink]="'/favorites'" class="header-large__icon-link" aria-label="Favorites">
+          <i class="header-large__icon-hearth fa-solid fa-heart"></i>
+        </a>
+      </li>
+      <li class="header-large__icon-item">
+        <a [routerLink]="'/cart'" class="header-large__icon-link" aria-label="Cart">
+          <i class="header-large__icon-cart fa-solid fa-cart-shopping"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+</div>

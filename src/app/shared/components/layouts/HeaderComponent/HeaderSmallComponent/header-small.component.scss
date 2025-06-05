@@ -1,0 +1,38 @@
+.header-small {
+  height: 36px;
+  padding: 0 48px;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-small__logo {
+    cursor: pointer;
+  }
+
+  .header-small__nav {
+    display: flex;
+    list-style: none;
+
+    .header-small__nav-item {
+      display: flex;
+      align-items: center;
+
+      .header-small__nav-link {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--text-color);
+        &:hover {
+          color: gray;
+        }
+      }
+
+      .header-small__vertical-line {
+        margin: 12px;
+        height: 12px;
+        border-right: 1px solid #333;
+      }
+    }
+  }
+}
