@@ -1,1 +1,39 @@
-<app-header />
+<div class="home">
+    <!-- Slider -->
+    <div class="home__slider">
+        <div class="home__slide-list">
+            <div *ngFor="let slide of slides" class="home__slide-item">
+                <span>{{ slide.title }}</span>
+                <div class="home__slider-link">
+                <a [routerLink]="slide.linkUrl">{{ slide.linkText }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner-->
+    <div class="home__banner">
+        <div class="home__banner-container">
+            <a [routerLink]="banner.linkUrl" class="home__banner-link">
+            <div class="home__banner-img">
+                <img
+                [src]="banner.imageUrl"
+                [alt]="banner.altText"
+                class="home__banner-img"
+                />
+            </div>
+            <div class="home__banner-content">
+                <p>{{ banner.subHeading }}</p>
+                <h3>{{ banner.heading }}</h3>
+                <p>{{ banner.description }}</p>
+                <div class="home__banner-content-link">
+                <a [routerLink]="banner.linkUrl">
+                    <span>{{ banner.linkText }}</span>
+                </a>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+
+</div>
