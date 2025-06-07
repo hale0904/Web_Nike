@@ -1,0 +1,33 @@
+.header-large__search {
+    display: flex;
+    width: 162px;
+    height: 36px;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+
+    &:hover .header-large__input {
+    background-color: #e0e0e0;
+    }
+
+    .header-large__icon-search {
+    font-size: 1.8rem;
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+    }
+
+
+    .header-large__input {
+    width: 124px;
+    height: 100%;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    flex: 1;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    }
+}

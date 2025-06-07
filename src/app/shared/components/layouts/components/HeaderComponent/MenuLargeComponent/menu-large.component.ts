@@ -1,22 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-header-large',
+  selector: 'app-menu-large',
   standalone: true,
   imports: [
     CommonModule,
-    RouterModule,
-    FormsModule 
+    RouterModule
   ],
-  templateUrl: './header-large.component.html',
-  styleUrls: ['./header-large.component.scss'],
+  templateUrl: './menu-large.component.html',
+  styleUrls: ['./menu-large.component.scss'],
 })
-export class HeaderLargeComponent {
-  searchQuery = '';
-
+export class MenuLargeComponent {
   menuItems = [
     { label: 'New & Featured', link: '/New & Featured' },
     { label: 'Men', link: '/men' },

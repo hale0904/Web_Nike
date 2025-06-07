@@ -1,0 +1,8 @@
+  <ul class="header-small__nav">
+    <li *ngFor="let item of navItems; let last = last" class="header-small__nav-item">
+      <a [routerLink]="item.link" class="header-small__nav-link">
+        {{ item.label }}
+      </a>
+      <div class="header-small__vertical-line" *ngIf="!last"></div>
+    </li>
+  </ul>

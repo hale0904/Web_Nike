@@ -1,16 +1,4 @@
-.header-small {
-  height: 36px;
-  padding: 0 48px;
-  background-color: #f6f6f6;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .header-small__logo {
-    cursor: pointer;
-  }
-
-  .header-small__nav {
+.header-small__nav {
     display: flex;
     list-style: none;
 
@@ -35,4 +23,3 @@
       }
     }
   }
-}

@@ -1,0 +1,12 @@
+.header-large {
+  height: 60px;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white-color);
+
+  .header-large__icon-nav {
+    display: flex;
+  }
+}

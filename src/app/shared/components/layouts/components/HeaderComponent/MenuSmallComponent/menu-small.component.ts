@@ -1,18 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router'; 
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-header-small',
+  selector: 'app-menu-small',
   standalone: true,
-  templateUrl: './header-small.component.html',
-  styleUrls: ['./header-small.component.scss'],
-  imports: [
-    CommonModule,
-    RouterModule 
-  ]
+  imports: [CommonModule, RouterModule],
+  templateUrl: './menu-small.component.html',
+  styleUrls: ['./menu-small.component.scss']
 })
-export class HeaderSmallComponent {
+export class MenuSmallComponent {
   navItems = [
     { label: 'Find a Store', link: '/store' },
     { label: 'Help', link: '/help' },

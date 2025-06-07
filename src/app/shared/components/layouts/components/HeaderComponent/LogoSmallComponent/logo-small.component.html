@@ -1,5 +1,4 @@
-<div class="header-small">
-  <div class="header-small__logo">
+<div class="header-small__logo">
     <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
         <path
             fill="currentColor"
@@ -8,14 +7,4 @@
             clip-rule="evenodd"
         ></path>
     </svg>
-  </div>
-
-  <ul class="header-small__nav">
-    <li *ngFor="let item of navItems; let last = last" class="header-small__nav-item">
-      <a [routerLink]="item.link" class="header-small__nav-link">
-        {{ item.label }}
-      </a>
-      <div class="header-small__vertical-line" *ngIf="!last"></div>
-    </li>
-  </ul>
 </div>
