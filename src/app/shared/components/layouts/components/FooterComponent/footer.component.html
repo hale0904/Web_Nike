@@ -1,0 +1,57 @@
+<div class="footer-wrapper">
+    <footer class="footer">
+        <div class="footer__border"></div>
+
+        <div class="footer__space-top"> </div>
+
+        <div class="footer__list-nav">
+            <app-footer-nav 
+                [title]="'Resources'" 
+                [items]="[
+                    { label: 'Find A Store', link: '/store' },
+                    { label: 'Become A Member', link: '/member' },
+                    { label: 'Running Shoe Finder', link: '/finder' },
+                    { label: 'Send Us Feedback', link: '/feedback' }
+                ]"
+            />
+
+            <app-footer-nav 
+                [title]="'Help'" 
+                [items]="[
+                    { label: 'Get Help', link: '/help' },
+                    { label: 'Order Status', link: '/order-status' },
+                    { label: 'Delivery', link: '/delivery' },
+                    { label: 'Returns', link: '/returns' },
+                    { label: 'Payment Options', link: '/payment' },
+                    { label: 'Contact Us', link: '/contact' }
+                ]"
+            />
+
+            <app-footer-nav 
+                [title]="'Company'" 
+                [items]="[
+                    { label: 'About Nike', link: '/about' },
+                    { label: 'News', link: '/news' },
+                    { label: 'Careers', link: '/careers' },
+                    { label: 'Investors', link: '/investors' },
+                    { label: 'Sustainability', link: '/sustainability' },
+                    { label: 'Impact', link: '/impact' },
+                    { label: 'Report a Concern', link: '/report' }
+                ]"
+            />
+
+            <div class="footer__button">
+                <button class="footer__btn-location">
+                    <a href="" class="footer__btn-link">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Vietnam
+                    </a>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer__space-bottom"> </div>
+
+        <app-info-footer />
+</footer>
+</div>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-
-import { HeaderComponent } from '@app/shared/components/layouts/components/HeaderComponent/header.component';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from '@shared/components/layouts/components/HeaderComponent/header.component';
+import { FooterComponent } from '@shared/components/layouts/components/FooterComponent/footer.component';
 
 @Component({
   selector: 'app-default-layout',
@@ -8,7 +9,9 @@ import { HeaderComponent } from '@app/shared/components/layouts/components/Heade
   templateUrl: './default-layout.component.html',
   styleUrls: ['./default-layout.component.scss'],
   imports: [
-    HeaderComponent
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class DefaultLayout {}

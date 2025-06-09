@@ -1,0 +1,35 @@
+.footer {
+    padding: 48px;
+
+    .footer__border {
+        border-top: 1px solid #ccc ;
+    }
+
+    .footer__space-top {
+        margin-top: 60px;
+    }
+
+    .footer__list-nav {
+        display: flex;
+        justify-content: space-between;
+
+        .footer__button{
+
+            .footer__btn-location{
+                background-color: transparent;
+                border: none;
+
+                .footer__btn-link {
+                    text-decoration: none;
+                    color: #727272;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+
+    .footer__space-bottom {
+        margin-top: 72px;
+    }
+}

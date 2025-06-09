@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
-import { CartComponent } from '~/pages/cart/cart.component';
+import { DefaultLayout } from '@shared/components/layouts/DefaultLayout/default-layout.component';
 import { HomeComponent } from '~/pages/home/home.component';
+import { CartComponent } from '~/pages/cart/cart.component';
 
 export const routes: Routes = [
-    {
-        // Home
-        path: '', component: HomeComponent
-    },
-    {
-        // Cart
-        path: 'cart', component: CartComponent
-    }
+  {
+    path: '',
+    component: DefaultLayout,
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'cart', component: CartComponent }
+    ]
+  }
 ];

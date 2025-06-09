@@ -1,0 +1,28 @@
+.footer__info {
+    display: flex;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    p {
+        color: #727272;   
+        padding-right: 30px;
+    }
+
+    .footer__info-list {
+        display: flex;
+        list-style: none;
+
+        .footer__info-item {
+            padding-right: 30px;
+
+            a {
+                text-decoration: none;
+                color: #727272;
+
+                &:hover {
+                    color: var(--text-color);
+                }
+            }
+        }
+    }
+}

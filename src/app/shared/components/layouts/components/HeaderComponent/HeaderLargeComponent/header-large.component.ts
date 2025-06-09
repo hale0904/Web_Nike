@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { LogoLargeComponent } from '../LogoLargeComponent/logo-large.component';
-import { MenuLargeComponent } from '../MenuLargeComponent/menu-large.component';
+import { MenuComponent } from '../MenuComponent/menu.component';
 import { IconNavComponent } from '../IconNavComponent/icon-nav.component';
 import { SearchBoxComponent } from '../SearchBoxComponent/search-box.component';
 
@@ -13,7 +13,7 @@ import { SearchBoxComponent } from '../SearchBoxComponent/search-box.component';
   standalone: true,
   imports: [
     LogoLargeComponent,
-    MenuLargeComponent,
+    MenuComponent,
     SearchBoxComponent,
     IconNavComponent,
     CommonModule,
@@ -23,4 +23,12 @@ import { SearchBoxComponent } from '../SearchBoxComponent/search-box.component';
   templateUrl: './header-large.component.html',
   styleUrls: ['./header-large.component.scss'],
 })
-export class HeaderLargeComponent {}
+export class HeaderLargeComponent {
+  menuItems = [
+    { label: 'New & Featured', link: '/New & Featured' },
+    { label: 'Men', link: '/men' },
+    { label: 'Women', link: '/Women' },
+    { label: 'Kids', link: '/kids' },
+    { label: 'Sale', link: '/sale' }
+  ];
+}

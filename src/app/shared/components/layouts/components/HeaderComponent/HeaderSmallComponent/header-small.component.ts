@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { LogoSmallComponent } from '../LogoSmallComponent/logo-small.component';
-import { MenuSmallComponent } from '../MenuSmallComponent/menu-small.component';
+import { MenuComponent } from '../MenuComponent/menu.component';
 
 @Component({
   selector: 'app-header-small',
@@ -10,7 +10,14 @@ import { MenuSmallComponent } from '../MenuSmallComponent/menu-small.component';
   styleUrls: ['./header-small.component.scss'],
   imports: [
     LogoSmallComponent,
-    MenuSmallComponent
+    MenuComponent
   ]
 })
-export class HeaderSmallComponent {}
+export class HeaderSmallComponent {
+  navItems = [
+    { label: 'Find a Store', link: '/store' },
+    { label: 'Help', link: '/help' },
+    { label: 'Join us', link: '/register' },
+    { label: 'Sign In', link: '/login' }
+  ];
+}
