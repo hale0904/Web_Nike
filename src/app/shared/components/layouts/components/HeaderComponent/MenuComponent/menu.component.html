@@ -1,11 +1,20 @@
 <ul [ngClass]="type === 'large' ? 'header-large__nav-list' : 'header-small__nav'">
   <li *ngFor="let item of items; let last = last" 
+      class="header__nav"
       [ngClass]="type === 'large' ? 'header-large__nav-item' : 'header-small__nav-item'">
     
     <a [routerLink]="item.link" 
        [ngClass]="type === 'large' ? 'header-large__nav-link' : 'header-small__nav-link'">
       {{ item.label }}
     </a>
+
+    <!-- Sub nav-->
+    <ul [ngClass]="type === 'large' ? 'header__sub-nav-list' : 'header__sub-nav-help'" 
+      *ngIf="item.children?.length">
+      <li *ngFor="let child of item.children" class="header__sub-item">
+        <a [routerLink]="child.link">{{ child.label }}</a>
+      </li>
+    </ul>
 
     <!-- Dòng kẻ dọc nếu là small và không phải phần tử cuối -->
     <div *ngIf="type === 'small' && !last" class="header-small__vertical-line"></div>

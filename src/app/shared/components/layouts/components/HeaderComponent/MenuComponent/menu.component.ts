@@ -10,6 +10,23 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  @Input() items: { label: string, link: string }[] = [];
+  @Input() items: { 
+    label: string, 
+    link: string, 
+    children?: {
+      label: string,
+      link: string
+    } [];
+  }[] = [];
   @Input() type: 'large' | 'small' = 'large';
+
+  isHovering = false;
+
+  onMouseEnter() {
+    this.isHovering = true;
+  }
+
+  onMouseLeave() {
+    this.isHovering = false;
+  }
 }

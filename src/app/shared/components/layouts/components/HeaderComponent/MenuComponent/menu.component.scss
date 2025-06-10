@@ -45,3 +45,111 @@
     }
   }
 }
+
+.header__nav {
+  position: relative;
+
+  .header__sub-nav-list {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 5px 20px;
+    margin: 0;
+    width: 250px;
+    z-index: 2;
+    transform: translateY(-10px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    .header__sub-item {
+      a {
+        display: block;
+        padding: 10px 0px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: var(--text-color-footer);
+        letter-spacing: 0.4px;
+
+        &:hover {
+          color: var(--text-color-header);
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      cursor: default;
+      position: absolute;
+      width: 150px;
+      left: 0;
+      top: -20px;
+      height: 25px;
+      background-color: #fff;
+      opacity: 0.01;
+    }
+  }
+
+  &:hover .header__sub-nav-list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  // Header small help
+  .header__sub-nav-help{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 35px;
+    right: 22%;
+    background-color: white;
+    list-style: none;
+    padding: 5px 10px;
+    margin: 0;
+    width: 150px;
+    z-index: 2;
+    transform: translateY(-10px); 
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    .header__sub-item {
+      a {
+        display: block;
+        padding: 10px 0px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: var(--text-color-footer);
+        letter-spacing: 0.4px;
+
+        &:hover {
+          color: var(--text-color-header);
+        }
+      }
+    }
+  }
+
+  &:hover .header__sub-nav-help {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    animation: slideDown 0.3s ease forwards;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+

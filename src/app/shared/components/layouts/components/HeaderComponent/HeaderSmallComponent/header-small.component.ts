@@ -16,7 +16,14 @@ import { MenuComponent } from '../MenuComponent/menu.component';
 export class HeaderSmallComponent {
   navItems = [
     { label: 'Find a Store', link: '/store' },
-    { label: 'Help', link: '/help' },
+    { label: 'Help', link: '/help',
+      children: [
+      { label: 'Order Status', link: '/products/Order Status' },
+      { label: 'Dispatch and Delivery', link: '/products/Dispatch&Delivery' },
+      { label: 'Returns', link: '/products/Returns' },
+      { label: 'Contact Us', link: '/products/ContactUs' }
+      ] 
+     },
     { label: 'Join us', link: '/register' },
     { label: 'Sign In', link: '/login' }
   ];
