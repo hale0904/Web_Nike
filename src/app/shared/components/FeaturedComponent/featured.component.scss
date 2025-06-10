@@ -1,0 +1,40 @@
+.section__content {
+    margin: 84px 48px 0;
+    padding: 0 6px;
+
+
+    .section__title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        padding-left: 30px;
+        margin-bottom: 28px;
+    }
+
+    .section__list {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        gap: 15px;
+        padding: 0 30px 48px;
+
+        .section__item {
+            a {
+                text-decoration: none;
+                font-size: 1.8rem;
+                color: var(--text-color);
+            }
+
+            .section__item-link {
+
+                .section__item-img {
+                    width: 100%;
+                }
+
+                .section__item-span {
+                    margin-top: 36px;
+                }
+            }
+        }
+        
+    }
+}

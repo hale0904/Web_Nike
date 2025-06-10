@@ -27,58 +27,19 @@
         }
     }
 
-    .home__banner {
-        margin: 0 48px;
-
-        .home__banner-container {
-            
-            .home__banner-link {
-                text-decoration: none;
-                color: var(--text-color);
-
-                .home__banner-img {
-                    width: 100%;
-                }
-
-                .home__banner-content {
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    margin-top: 36px;
-                    align-items: center;
-                    
-                    p {
-                        font-size: 1.6rem;
-                        font-weight: 500;
-                    }
-
-                    h3 {
-                        font-size: 6rem;
-                        line-height: 6.4rem;
-                        font-weight: 800;
-                        align-content: center;
-                        margin: 8px 0;
-                    }
-
-                    .home__banner-content-link {
-                        margin-top: 18px;
-                        padding: 8px 16px;
-                        border-radius: 20px;
-                        background-color: var(--black-color);
-
-                        a {
-                            font-size: 1.6rem;
-                            text-decoration: none;
-                            color: var(--white-color);
-                            font-weight: 600;
-                        }
-
-                        &:hover {
-                            background-color: #6f6f6f;
-                        }
-                    }
-                }
-            }
-        }     
+    .section {
+        display: flex;
     }
+
+    .banner__second {
+        margin-top: 80px;
+
+        .Banne__second-title {
+            margin-left: 48px;
+            font-size: 2.6rem;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+    }
+
 }

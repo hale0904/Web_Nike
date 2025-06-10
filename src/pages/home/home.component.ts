@@ -2,10 +2,15 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router'; 
 
+import { BannerComponent } from '@shared/components/BannerComponent/banner.component';
+import { FeaturedComponent } from '~/app/shared/components/FeaturedComponent/featured.component';
+
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
+    BannerComponent,
+    FeaturedComponent,
     CommonModule,
     RouterModule 
   ],
@@ -31,14 +36,6 @@ export class HomeComponent {
     // },
   ];
 
-  banner = {
-  imageUrl: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1946,c_limit/f5654862-ef4d-4f10-85f7-7c11f1fe1f8f/nike-just-do-it.png',
-  altText: 'Nike. Just Do It',
-  heading: 'FEAR NOTHING.',
-  subHeading: 'BUILT ON JOY. BACKED BY FORCE.',
-  description: 'The Brazil 2025 National Team Kit has arrived.',
-  linkUrl: '/shop',
-  linkText: 'Shop',
-  };
+  
 
 }
