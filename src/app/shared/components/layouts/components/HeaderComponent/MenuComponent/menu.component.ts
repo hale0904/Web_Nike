@@ -19,14 +19,4 @@ export class MenuComponent {
     } [];
   }[] = [];
   @Input() type: 'large' | 'small' = 'large';
-
-  isHovering = false;
-
-  onMouseEnter() {
-    this.isHovering = true;
-  }
-
-  onMouseLeave() {
-    this.isHovering = false;
-  }
 }
