@@ -25,6 +25,6 @@ export class HeaderSmallComponent {
       ] 
      },
     { label: 'Join us', link: '/register' },
-    { label: 'Sign In', link: '/login' }
+    { label: 'Sign In', link: '/auth/login' }
   ];
 }

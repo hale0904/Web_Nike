@@ -6,7 +6,7 @@ import { BannerComponent } from '@shared/components/BannerComponent/banner.compo
 import { FeaturedComponent } from '~/app/shared/components/FeaturedComponent/featured.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-home-page',
   standalone: true,
   imports: [
     BannerComponent,
@@ -17,7 +17,7 @@ import { FeaturedComponent } from '~/app/shared/components/FeaturedComponent/fea
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {
+export class HomePage {
   slides = [
     {
       title: 'New Styles On Sale: Up To 40% Off',
