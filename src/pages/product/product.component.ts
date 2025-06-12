@@ -1,10 +1,9 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-@Component ({
+@Component({
     selector: 'app-product-page',
     standalone: true,
     templateUrl: './product.component.html',
     styleUrl: './product.component.scss'
 })
-
 export class ProductPage {}

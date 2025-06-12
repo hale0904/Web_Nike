@@ -1,0 +1,33 @@
+<div *ngFor="let form of forms" class="form">
+    <header class="form__header">
+        <h2 class="form__header-title">{{ form.heading }}</h2>
+        <p>{{ form.description }}</p>
+    </header>
+
+    <div class="form__region">
+        <form (ngSubmit)="onSubmit(form)" #formRef="ngForm">
+            <div class="form__region-input">
+                <div class="form__field" *ngFor="let field of form.fields">
+                    <h3 class="form__region-label">{{ field.label }}</h3>
+                    <input
+                        type="text"
+                        name="{{ field.name }}"
+                        [(ngModel)]="field.value"
+                        [placeholder]="field.placeholder"
+                        required
+                    />
+                </div>
+            </div>
+
+            <div class="form__region-info">
+                <p>{{ form.info }}</p>
+            </div>
+
+            <div class="form__region-btn">
+                <button type="submit">
+                    {{ form.linkText }}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

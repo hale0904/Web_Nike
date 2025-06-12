@@ -1,155 +1,157 @@
 .header-large__nav-list {
-  display: flex;
-  list-style: none;
+    display: flex;
+    list-style: none;
 
-  .header-large__nav-item {
-    padding-right: 24px;
+    .header-large__nav-item {
+        padding-right: 24px;
 
-    .header-large__nav-link {
-      font-size: 1.6rem;
-      font-weight: 600;
-      padding: 4px 0;
-      text-decoration: none;
-      color: var(--text-color);
+        .header-large__nav-link {
+            font-size: 1.6rem;
+            font-weight: 600;
+            padding: 4px 0;
+            text-decoration: none;
+            color: var(--text-color);
 
-      &:hover {
-        border-bottom: 2px solid #000;
-      }
+            &:hover {
+                border-bottom: 2px solid #000;
+            }
+        }
     }
-  }
 }
 
 .header-small__nav {
-  display: flex;
-  list-style: none;
-
-  .header-small__nav-item {
     display: flex;
-    align-items: center;
+    list-style: none;
 
-    .header-small__nav-link {
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-decoration: none;
-      color: var(--text-color);
+    .header-small__nav-item {
+        display: flex;
+        align-items: center;
 
-      &:hover {
-        color: gray;
-      }
+        .header-small__nav-link {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--text-color);
+
+            &:hover {
+                color: gray;
+            }
+        }
+
+        .header-small__vertical-line {
+            margin: 12px;
+            height: 12px;
+            border-right: 1px solid #333;
+        }
     }
-
-    .header-small__vertical-line {
-      margin: 12px;
-      height: 12px;
-      border-right: 1px solid #333;
-    }
-  }
 }
 
 .header__nav {
-  position: relative;
+    position: relative;
 
-  .header__sub-nav-list {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    position: absolute;
-    top: 35px;
-    left: 0;
-    background-color: white;
-    list-style: none;
-    padding: 5px 20px;
-    margin: 0;
-    width: 250px;
-    z-index: 2;
-    transform: translateY(-10px); 
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    .header__sub-nav-list {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: 35px;
+        left: 0;
+        background-color: white;
+        list-style: none;
+        padding: 5px 20px;
+        margin: 0;
+        width: 250px;
+        z-index: 2;
+        transform: translateY(-10px);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
 
-    .header__sub-item {
-      a {
-        display: block;
-        padding: 10px 0px;
-        text-decoration: none;
-        font-size: 1.4rem;
-        color: var(--text-color-footer);
-        letter-spacing: 0.4px;
+        .header__sub-item {
+            a {
+                display: block;
+                padding: 10px 0px;
+                text-decoration: none;
+                font-size: 1.4rem;
+                color: var(--text-color-footer);
+                letter-spacing: 0.4px;
 
-        &:hover {
-          color: var(--text-color-header);
+                &:hover {
+                    color: var(--text-color-header);
+                }
+            }
         }
-      }
-    }
 
-    &::after {
-      content: "";
-      cursor: default;
-      position: absolute;
-      width: 150px;
-      left: 0;
-      top: -20px;
-      height: 25px;
-      background-color: #fff;
-      opacity: 0.01;
-    }
-  }
-
-  &:hover .header__sub-nav-list {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    animation: slideDown 0.3s ease forwards;
-  }
-
-  // Header small help
-  .header__sub-nav-help{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    position: absolute;
-    top: 35px;
-    right: 22%;
-    background-color: white;
-    list-style: none;
-    padding: 5px 10px;
-    margin: 0;
-    width: 150px;
-    z-index: 2;
-    transform: translateY(-10px); 
-    transition: opacity 0.3s ease, transform 0.3s ease;
-
-    .header__sub-item {
-      a {
-        display: block;
-        padding: 10px 0px;
-        text-decoration: none;
-        font-size: 1.2rem;
-        color: var(--text-color-footer);
-        letter-spacing: 0.4px;
-
-        &:hover {
-          color: var(--text-color-header);
+        &::after {
+            content: "";
+            cursor: default;
+            position: absolute;
+            width: 150px;
+            left: 0;
+            top: -20px;
+            height: 25px;
+            background-color: #fff;
+            opacity: 0.01;
         }
-      }
     }
-  }
 
-  &:hover .header__sub-nav-help {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    animation: slideDown 0.3s ease forwards;
-  }
+    &:hover .header__sub-nav-list {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    // Header small help
+    .header__sub-nav-help {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        top: 35px;
+        right: 22%;
+        background-color: white;
+        list-style: none;
+        padding: 5px 10px;
+        margin: 0;
+        width: 150px;
+        z-index: 2;
+        transform: translateY(-10px);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+
+        .header__sub-item {
+            a {
+                display: block;
+                padding: 10px 0px;
+                text-decoration: none;
+                font-size: 1.2rem;
+                color: var(--text-color-footer);
+                letter-spacing: 0.4px;
+
+                &:hover {
+                    color: var(--text-color-header);
+                }
+            }
+        }
+    }
+
+    &:hover .header__sub-nav-help {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        animation: slideDown 0.3s ease forwards;
+    }
 }
 
 @keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-
-

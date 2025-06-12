@@ -1,13 +1,12 @@
-import { Component } from "@angular/core";
-import { FooterNavComponent } from "./NavFooterComponent/nav-footer.component";
-import { InfoFooterComponent } from "./InfoComponent/info.component";
+import { Component } from '@angular/core';
+import { FooterNavComponent } from './NavFooterComponent/nav-footer.component';
+import { InfoFooterComponent } from './InfoComponent/info.component';
 
-@Component ({
+@Component({
     selector: 'app-footer',
     standalone: true,
-    imports: [FooterNavComponent,InfoFooterComponent],
+    imports: [FooterNavComponent, InfoFooterComponent],
     templateUrl: './footer.component.html',
-    styleUrls: ['./footer.component.scss'],
+    styleUrls: ['./footer.component.scss']
 })
-
 export class FooterComponent {}

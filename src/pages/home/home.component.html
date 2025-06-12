@@ -5,66 +5,69 @@
             <div *ngFor="let slide of slides" class="home__slide-item">
                 <span>{{ slide.title }}</span>
                 <div class="home__slider-link">
-                <a [routerLink]="slide.linkUrl">{{ slide.linkText }}</a>
+                    <a [routerLink]="slide.linkUrl">{{ slide.linkText }}</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Banner first-->
-    <app-banner 
-        [banners] = "[
+    <app-banner
+        [banners]="[
             {
-                imageUrl: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1946,c_limit/f5654862-ef4d-4f10-85f7-7c11f1fe1f8f/nike-just-do-it.png',
+                imageUrl:
+                    'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1946,c_limit/f5654862-ef4d-4f10-85f7-7c11f1fe1f8f/nike-just-do-it.png',
                 altText: 'Nike. Just Do It',
                 heading: 'FEAR NOTHING.',
                 subHeading: 'BUILT ON JOY. BACKED BY FORCE.',
                 description: 'The Brazil 2025 National Team Kit has arrived.',
                 linkUrl: '/product',
-                linkText: 'Shop',
+                linkText: 'Shop'
             }
         ]"
     />
 
     <!-- Section-->
-    <app-section 
-        [title]="'Featured'" 
+    <app-section
+        [title]="'Featured'"
         [items]="[
             {
-                imgURL: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_534,c_limit/5626df58-5b3b-45dd-933b-f4dce5848ef5/image.png', 
-                imgALT: 'Trail ready in style', 
-                link: '/Trail ready in style', 
+                imgURL: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_534,c_limit/5626df58-5b3b-45dd-933b-f4dce5848ef5/image.png',
+                imgALT: 'Trail ready in style',
+                link: '/Trail ready in style',
                 label: 'Trail ready in style'
             },
             {
-                imgURL: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_534,c_limit/0514a616-6d3f-4fcb-99f0-eb16c5b1c4ab/nike-just-do-it.png', 
-                imgALT: 'Game Time Must-Haves', 
-                link: '/Game Time Must-Haves', 
+                imgURL: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_534,c_limit/0514a616-6d3f-4fcb-99f0-eb16c5b1c4ab/nike-just-do-it.png',
+                imgALT: 'Game Time Must-Haves',
+                link: '/Game Time Must-Haves',
                 label: 'Game Time Must-Haves'
-            },{
-                imgURL: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_534,c_limit/ecce6354-85b7-4b95-ad9b-fad35268409b/nike-just-do-it.png', 
-                imgALT: 'Pretty in Pink', 
-                link: '/Pretty in Pink', 
+            },
+            {
+                imgURL: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_534,c_limit/ecce6354-85b7-4b95-ad9b-fad35268409b/nike-just-do-it.png',
+                imgALT: 'Pretty in Pink',
+                link: '/Pretty in Pink',
                 label: 'Pretty in Pink'
             }
         ]"
     />
-    
+
     <!-- Banner second-->
-     <div class="banner__second">
+    <div class="banner__second">
         <h2 class="Banne__second-title">The Latest</h2>
-        <app-banner 
-            [banners] = "[
+        <app-banner
+            [banners]="[
                 {
-                    imageUrl: 'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1946,c_limit/b44a2f42-ca02-4ec9-947a-e9014312e121/nike-just-do-it.png',
+                    imageUrl:
+                        'https://static.nike.com/a/images/f_auto/dpr_1.3,cs_srgb/h_1946,c_limit/b44a2f42-ca02-4ec9-947a-e9014312e121/nike-just-do-it.png',
                     altText: 'Luka 4',
                     heading: 'BAD LUKA! NICE SHOES',
                     subHeading: 'Luka 4',
                     description: 'Stability. Zoom Air. Nice shoes.',
                     linkUrl: '/product',
-                    linkText: 'Shop',
+                    linkText: 'Shop'
                 }
             ]"
         />
-     </div>
+    </div>
 </div>

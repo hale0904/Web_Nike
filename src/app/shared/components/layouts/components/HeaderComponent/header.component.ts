@@ -1,16 +1,12 @@
-import { Component } from "@angular/core";
-import { HeaderLargeComponent } from "./HeaderLargeComponent/header-large.component";
-import { HeaderSmallComponent } from "./HeaderSmallComponent/header-small.component";
+import { Component } from '@angular/core';
+import { HeaderLargeComponent } from './HeaderLargeComponent/header-large.component';
+import { HeaderSmallComponent } from './HeaderSmallComponent/header-small.component';
 
-@Component ({
-    selector : 'app-header',
+@Component({
+    selector: 'app-header',
     standalone: true,
-    imports:[
-        HeaderSmallComponent,
-        HeaderLargeComponent
-    ],
+    imports: [HeaderSmallComponent, HeaderLargeComponent],
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })
-
 export class HeaderComponent {}

@@ -1,24 +1,20 @@
 <!-- Banner-->
-    <div *ngFor="let banner of banners" class="home__banner">
-        <div class="home__banner-container">
-            <a [routerLink]="banner.linkUrl" class="home__banner-link">
+<div *ngFor="let banner of banners" class="home__banner">
+    <div class="home__banner-container">
+        <a [routerLink]="banner.linkUrl" class="home__banner-link">
             <div class="home__banner-img">
-                <img
-                [src]="banner.imageUrl"
-                [alt]="banner.altText"
-                class="home__banner-img"
-                />
+                <img [src]="banner.imageUrl" [alt]="banner.altText" class="home__banner-img" />
             </div>
             <div class="home__banner-content">
                 <p>{{ banner.subHeading }}</p>
                 <h3>{{ banner.heading }}</h3>
                 <p>{{ banner.description }}</p>
                 <div class="home__banner-content-link">
-                <a [routerLink]="banner.linkUrl">
-                    <span>{{ banner.linkText }}</span>
-                </a>
+                    <a [routerLink]="banner.linkUrl">
+                        <span>{{ banner.linkText }}</span>
+                    </a>
                 </div>
             </div>
-            </a>
-        </div>
+        </a>
     </div>
+</div>

@@ -4,12 +4,9 @@
         <li *ngFor="let item of items" class="section__item">
             <a [routerLink]="item.link" class="section__item-link">
                 <div class="section__item-container">
-                    <img 
-                    [src]="item.imgURL"
-                    [alt]="item.imgALT"
-                    class="section__item-img"/>
+                    <img [src]="item.imgURL" [alt]="item.imgALT" class="section__item-img" />
                     <div class="section__item-span">
-                        <span>{{ item.label}}</span>
+                        <span>{{ item.label }}</span>
                     </div>
                 </div>
             </a>

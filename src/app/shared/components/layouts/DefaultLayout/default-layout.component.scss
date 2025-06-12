@@ -1,23 +1,25 @@
 app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  height: var(--height-header, 60px);
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    height: var(--height-header, 60px);
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
 }
 
 /* Khi header bị ẩn */
 .header-hidden app-header {
-  transform: translateY(-100%);
-  opacity: 0;
-  pointer-events: none;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Để phần main không bị header đè lên */
 .main-content {
-  padding-top: var(--height-header, 60px);
+    padding-top: var(--height-header, 60px);
 }

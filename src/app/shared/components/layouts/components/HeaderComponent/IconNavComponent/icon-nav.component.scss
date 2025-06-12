@@ -5,22 +5,22 @@
     padding-left: 10px;
 
     .header-large__icon-item {
-      margin-left: 8px;
+        margin-left: 8px;
 
-    .header-large__icon-link {
-      text-decoration: none;
-      color: inherit;
-      padding: 15px 8px 10px ;
+        .header-large__icon-link {
+            text-decoration: none;
+            color: inherit;
+            padding: 15px 8px 10px;
 
-      i {
-        margin-top: 9px;
-        font-size: 1.8rem;
-      }
+            i {
+                margin-top: 9px;
+                font-size: 1.8rem;
+            }
 
-      &:hover {
-        background-color: #e0e0e0;
-        border-radius:30px;
-      }
+            &:hover {
+                background-color: #e0e0e0;
+                border-radius: 30px;
+            }
+        }
     }
-  }
 }
