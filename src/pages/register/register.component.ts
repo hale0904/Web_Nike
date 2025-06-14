@@ -20,10 +20,8 @@ export class RegisterPage {
             { label: 'Re-enter Password', name: 'rePassWord', value: '', placeholder: 'Re-enter Password' }
         ],
         info: 'Please double check your information before submitting.',
-        buttons: [
-            { linkText: 'Sign In' },
-            { linkText: 'Sign Up' },
-        ]
+        btn: 'Sign In',
+        linkText: 'Sign Up'
     }
 ];
 

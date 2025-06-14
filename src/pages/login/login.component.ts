@@ -19,11 +19,9 @@ export class LoginPage {
                 { label: 'Email', name: 'email', value: '', placeholder: 'Enter email' },
                 { label: 'Password', name: 'passWord', value: '', placeholder: 'Enter Password' },
             ],
-            info: 'By continuing, I agree to Nike\'s Privacy Policy and Terms of Use.',
-            buttons: [
-                { linkText: 'Forgot Password' },
-                { linkText: 'Sign In' },
-            ]
+            info: 'By continuing, I agree to Nike is Privacy Policy and Terms of Use.',
+            btn: 'Sign In',
+            linkText: 'Forgor password?'
         }
     ];
 }

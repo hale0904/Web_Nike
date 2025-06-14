@@ -25,11 +25,14 @@
             </div>
 
             <div class="form__region-btn">
-                <div class="form__btn" *ngFor="let button of form.buttons">
-                <button type="button" (click)="onSubmit(form, button)">
-                    {{ button.linkText }}
-                </button>
-            </div>
+                <div class="form__link">
+                    <a href="/auth/login"> {{ form.linkText }}</a>
+                </div>
+                <div class="form__btn" >
+                    <button type="button" (click)="onSubmit(form)">
+                        {{ form.btn }}
+                    </button>
+                </div>
             </div>
         </form>
     </div>

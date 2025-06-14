@@ -5,9 +5,6 @@ export interface FormField {
     placeholder: string;
 }
 
-export interface FormButton {
-    linkText: string;
-}
 
 export interface FormConfig {
     back: string;
@@ -15,5 +12,6 @@ export interface FormConfig {
     description: string;
     fields: FormField[];
     info: string;
-    buttons: FormButton[];
+    btn: string;
+    linkText: string;
 }
