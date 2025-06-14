@@ -1,51 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { Actor } from '@shared/service/actor';
+import { FormConfig, FormField, FormButton } from '@shared/models/form-config';
 
 @Component({
     selector: 'app-form',
     standalone: true,
     imports: [
         CommonModule,
-        FormsModule, // thêm FormsModule để dùng [(ngModel)]
-        RouterModule // nếu bạn có điều hướng sau khi submit
+        RouterModule,
+        FormsModule,
     ],
     templateUrl: './form.component.html',
     styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-    // // Dữ liệu form giả lập
-    // forms = [
-    //     {
-    //         heading: 'Register',
-    //         description: 'Please enter your information',
-    //         info: 'All fields are required.',
-    //         linkText: 'Submit',
-    //         linkUrl: '/success', // Sau khi submit có thể điều hướng
-    //         fields: [
-    //             { label: 'Email', name: 'email', placeholder: 'Enter email', value: '' },
-    //             { label: 'Name', name: 'name', placeholder: 'Enter name', value: '' }
-    //         ]
-    //     },
-    //     {
-    //         heading: 'Login',
-    //         description: 'Login to your account',
-    //         info: 'Please provide credentials.',
-    //         linkText: 'Login',
-    //         linkUrl: '/dashboard',
-    //         fields: [
-    //             { label: 'Username', name: 'username', placeholder: 'Enter username', value: '' },
-    //             { label: 'Password', name: 'password', placeholder: 'Enter password', value: '' }
-    //         ]
-    //     }
-    // ];
 
-    // constructor(private router: Router) {}
+    @Input() forms: FormConfig[] = [];
 
-    // onSubmit(form: any) {
-    //     console.log('Form submitted:', form);
-    //     // Điều hướng sau khi submit
-    //     this.router.navigateByUrl(form.linkUrl);
-    // }
+    onSubmit(form: FormConfig, button: FormButton) {
+        const actor = this.mapToActor(form.fields);
+        console.log("User submitted with data:", actor);
+        console.log("Button clicked:", button.linkText);
+    }
+
+    mapToActor(fields: FormField[]): Partial<Actor> {
+        const fieldMap: any = {};
+        fields.forEach(field => {
+            fieldMap[field.name] = field.value;
+        });
+
+        return {
+            email: fieldMap['email'] || '',
+            password: fieldMap['passWord'] || '',
+            rePassword: fieldMap['rePassWord'] || ''
+        };
+    }
 }

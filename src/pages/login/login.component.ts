@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormComponent } from '@shared/components/FormComponent/form.component';
+import { FormConfig } from '@shared/models/form-config';
 
 @Component({
     selector: 'app-login-page',
@@ -8,4 +9,21 @@ import { FormComponent } from '@shared/components/FormComponent/form.component';
     templateUrl: './login.component.html',
     styleUrl: './login.component.scss'
 })
-export class LoginPage {}
+export class LoginPage {
+    forms: FormConfig[] = [
+        {
+            back: 'Back',
+            heading: 'SIGN IN',
+            description: 'Enter your email and password to sign in.',
+            fields: [
+                { label: 'Email', name: 'email', value: '', placeholder: 'Enter email' },
+                { label: 'Password', name: 'passWord', value: '', placeholder: 'Enter Password' },
+            ],
+            info: 'By continuing, I agree to Nike\'s Privacy Policy and Terms of Use.',
+            buttons: [
+                { linkText: 'Forgot Password' },
+                { linkText: 'Sign In' },
+            ]
+        }
+    ];
+}

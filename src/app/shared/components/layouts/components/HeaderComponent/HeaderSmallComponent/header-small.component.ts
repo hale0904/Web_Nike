@@ -23,7 +23,7 @@ export class HeaderSmallComponent {
                 { label: 'Contact Us', link: '/products/ContactUs' }
             ]
         },
-        { label: 'Join us', link: '/register' },
+        { label: 'Sign Up', link: '/auth/register' },
         { label: 'Sign In', link: '/auth/login' }
     ];
 }
