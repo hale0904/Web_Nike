@@ -1,6 +1,6 @@
 <div *ngFor="let form of forms" class="form">
     <header class="form__header">
-        <a href="" class="form__header-link"> {{ form.back }} </a>
+        <a [routerLink]="form.linkHome" class="form__header-link"> {{ form.home }} </a>
         <h2 class="form__header-title">{{ form.heading }}</h2>
         <p>{{ form.description }}</p>
     </header>
@@ -26,7 +26,9 @@
 
             <div class="form__region-btn">
                 <div class="form__link">
-                    <a href="/auth/login"> {{ form.linkText }}</a>
+                    <a [routerLink]="form.link">
+                    <span>{{ form.linkText }}</span>
+                    </a>
                 </div>
                 <div class="form__btn" >
                     <button type="button" (click)="onSubmit(form)">

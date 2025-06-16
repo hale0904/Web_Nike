@@ -7,11 +7,13 @@ export interface FormField {
 
 
 export interface FormConfig {
-    back: string;
+    home: string;
+    linkHome: string;
     heading: string;
     description: string;
     fields: FormField[];
     info: string;
     btn: string;
+    link: string;
     linkText: string;
 }

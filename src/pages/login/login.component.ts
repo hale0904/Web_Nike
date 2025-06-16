@@ -12,7 +12,8 @@ import { FormConfig } from '@shared/models/form-config';
 export class LoginPage {
     forms: FormConfig[] = [
         {
-            back: 'Back',
+            home: 'Home',
+            linkHome: '/',
             heading: 'SIGN IN',
             description: 'Enter your email and password to sign in.',
             fields: [
@@ -21,6 +22,7 @@ export class LoginPage {
             ],
             info: 'By continuing, I agree to Nike is Privacy Policy and Terms of Use.',
             btn: 'Sign In',
+            link: '/auth/forgot-password',
             linkText: 'Forgor password?'
         }
     ];
